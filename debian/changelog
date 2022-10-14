@@ -1,0 +1,80 @@
+node-pump (3.0.0-5) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on node-once.
+    + node-pump: Drop versioned constraint on node-once in Depends.
+
+  [ Yadd ]
+  * Bump debhelper compatibility level to 13
+  * Modernize debian/watch
+    * Fix GitHub tags regex
+    * Fix filenamemangle
+  * Use dh-sequence-nodejs instead of pkg-js-tools
+  * Update standards version to 4.6.0, no changes needed.
+  * Drop dependency to nodejs
+
+ -- Yadd <yadd@debian.org>  Tue, 16 Nov 2021 11:09:05 +0100
+
+node-pump (3.0.0-4) unstable; urgency=medium
+
+  * Team upload
+  * Patch to test with nonblocking urandom (Closes: #963429)
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 28 Jul 2020 18:07:37 +0200
+
+node-pump (3.0.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Increase test timeout (Closes: #963429)
+  * Fix Buffer() use in test
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 23 Jun 2020 10:17:59 +0200
+
+node-pump (3.0.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Bump debhelper compatibility level to 12
+  * Use pkg-js-tools auto test & install
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 01 Mar 2020 20:36:19 +0100
+
+node-pump (3.0.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Fri, 20 Apr 2018 15:30:50 +0800
+
+node-pump (2.0.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Change Section from web to javascript
+  * Bump Standards-Version to 4.1.1: nothing needs to be changed
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Tue, 12 Dec 2017 16:11:14 +0800
+
+node-pump (1.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #865509)
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Thu, 22 Jun 2017 06:29:48 +0000

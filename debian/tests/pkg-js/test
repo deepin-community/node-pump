@@ -1,0 +1,4 @@
+set -e
+set -x
+node ./test-node.js
+node ./test-browser.js

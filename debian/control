@@ -1,0 +1,27 @@
+Source: node-pump
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Ying-Chun Liu (PaulLiu) <paulliu@debian.org>
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-end-of-stream <!nocheck>
+ , node-once <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-pump
+Vcs-Git: https://salsa.debian.org/js-team/node-pump.git
+Homepage: https://github.com/mafintosh/pump
+Rules-Requires-Root: no
+
+Package: node-pump
+Architecture: all
+Depends: ${misc:Depends}
+ , node-end-of-stream
+ , node-once
+Description: small node module that pipes streams together
+ When using standard source.pipe(dest) source will not be destroyed if dest
+ emits close or an error. You are also not able to provide a callback to tell
+ when then pipe has finished. pump does these two things for you.
+ .
+ Node.js is an event-based server-side JavaScript engine.

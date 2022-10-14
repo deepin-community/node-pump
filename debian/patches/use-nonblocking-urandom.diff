@@ -1,0 +1,14 @@
+Description: use non-blocking urandom, buildd cannot guarantee random to be fast enough ever
+Last-Update: 2020-07-28
+Author: Jérémy Lal <kapouer@melix.org>
+Forwarded: no
+--- a/test-node.js
++++ b/test-node.js
+@@ -1,6 +1,6 @@
+ var pump = require('./index')
+ 
+-var rs = require('fs').createReadStream('/dev/random')
++var rs = require('fs').createReadStream('/dev/urandom')
+ var ws = require('fs').createWriteStream('/dev/null')
+ 
+ var toHex = function () {

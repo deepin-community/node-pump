@@ -1,0 +1,5 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-pump-$1/ \
+ https://github.com/mafintosh/pump/tags .*/archive/.*/v?([\d\.]+).tar.gz

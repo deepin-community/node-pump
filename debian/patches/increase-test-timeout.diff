@@ -1,0 +1,19 @@
+Description: increase test timeout
+Author: Xavier Guimard <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/963429
+Forwarded: no
+Last-Update: 2020-06-23
+
+--- a/test-node.js
++++ b/test-node.js
+@@ -46,8 +46,8 @@
+ 
+ setTimeout(function () {
+   rs.destroy()
+-}, 1000)
++}, 5000)
+ 
+ var timeout = setTimeout(function () {
+   throw new Error('timeout')
+-}, 5000)
++}, 25000)
